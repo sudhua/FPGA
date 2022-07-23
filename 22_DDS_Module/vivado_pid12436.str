@@ -1,0 +1,136 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 12436
+License: Customer
+
+Current time: 	Wed Jul 20 22:34:57 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 154 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Tools/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Tools/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Hua
+User home directory: C:/Users/Hua
+User working directory: D:/Projects/FPGA/22_DDS_Module
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Tools/Xilinx/Vivado
+HDI_APPROOT: C:/Tools/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Tools/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Tools/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/Hua/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/Hua/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/Hua/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Tools/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	
+Vivado journal file location: 	
+Engine tmp dir: 	D:/Projects/FPGA/22_DDS_Module/.Xil/Vivado-12436-DESKTOP-8F63B2V
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Tools/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Tools/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Tools/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Tools/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	181 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 753 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 75 MB (+75756kb) [00:00:05]
+// [Engine Memory]: 635 MB (+514357kb) [00:00:05]
+// [GUI Memory]: 90 MB (+12543kb) [00:00:06]
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: source c:/Users/Hua/.vscode/extensions/sterben.fpga-support-0.2.5/resources/script/xilinx/launch.tcl -notrace 
+// Tcl Message: Vivado% 
+// Tcl Message: source c:/Users/Hua/.vscode/extensions/sterben.fpga-support-0.2.5/resources/script/xilinx/simulate.tcl -notrace 
+// [Engine Memory]: 669 MB (+2690kb) [00:00:07]
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// [GUI Memory]: 110 MB (+16342kb) [00:00:08]
+// [Engine Memory]: 707 MB (+4109kb) [00:00:08]
+// [Engine Memory]: 753 MB (+11376kb) [00:00:09]
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1606 ms.
+// bx (cp):  Sourcing Tcl script 'c:/Users/Hua/.vscode/extensions/sterben.fpga-support-0.2.5/resources/script/xilinx/simulate.tcl' : addNotify
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Sourcing Tcl script 'c:/Users/Hua/.vscode/extensions/sterben.fpga-support-0.2.5/resources/script/xilinx/simulate.tcl'"); // bx (cp)
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 188, 128); // n (o, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 753 MB. GUI used memory: 53 MB. Current time: 7/20/22, 10:34:58 PM CST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 753 MB. GUI used memory: 53 MB. Current time: 7/20/22, 10:34:58 PM CST
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 66 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 192, 124); // n (o, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 28 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 192, 124); // n (o, cp)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 753 MB. GUI used memory: 53 MB. Current time: 7/20/22, 10:36:32 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
