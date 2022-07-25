@@ -10,7 +10,6 @@ module DDS_Module_AD9767(
 	CLK2,
 	WRT1,
 	WRT2
-
 );
 	input Clk;
 	input Reset_n;
