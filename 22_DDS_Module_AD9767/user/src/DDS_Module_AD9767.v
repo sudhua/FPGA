@@ -157,5 +157,4 @@ module DDS_Module_AD9767(
 			7: Pword2 <= 3584;
 		endcase
 
-
 endmodule
