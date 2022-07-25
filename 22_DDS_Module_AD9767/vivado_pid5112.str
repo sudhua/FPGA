@@ -1,0 +1,332 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 5112
+License: Customer
+
+Current time: 	Mon Jul 25 13:02:54 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 138 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Tools/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Tools/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Hua
+User home directory: C:/Users/Hua
+User working directory: D:/Projects/FPGA/22_DDS_Module_AD9767
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Tools/Xilinx/Vivado
+HDI_APPROOT: C:/Tools/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Tools/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Tools/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/Hua/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/Hua/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/Hua/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Tools/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	
+Vivado journal file location: 	
+Engine tmp dir: 	D:/Projects/FPGA/22_DDS_Module_AD9767/.Xil/Vivado-5112-DESKTOP-8F63B2V
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Tools/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Tools/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Tools/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Tools/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 703 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 75 MB (+76427kb) [00:00:05]
+// [Engine Memory]: 611 MB (+489138kb) [00:00:05]
+// [GUI Memory]: 92 MB (+13244kb) [00:00:07]
+// Tcl Message: source c:/Users/Hua/.vscode/extensions/sterben.fpga-support-0.2.5/resources/script/xilinx/launch.tcl -notrace 
+// Tcl Message: Vivado% 
+// Tcl Message: start_gui -quiet 
+// [GUI Memory]: 108 MB (+12003kb) [00:00:08]
+// [Engine Memory]: 644 MB (+2746kb) [00:00:08]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 682 MB (+6323kb) [00:00:09]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 48 MB. Current time: 7/25/22, 1:02:56 PM CST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 2); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 2); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 2); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 2); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Coefficient Files]", 7); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Coefficient Files]", 7); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 5); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 5); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cp)
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // B (E, cp)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+typeControlKey((HResource) null, "DDS_Module_AD9767.v", 'c'); // cl (w, cp)
+selectCodeEditor("DDS_Module_AD9767.v", 457, 167); // cl (w, cp)
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v), DSS_Module_inst1 : DSS_Module (DDS_Module.v)]", 2); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v), DSS_Module_inst1 : DSS_Module (DDS_Module.v)]", 2); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v), DSS_Module_inst1 : DSS_Module (DDS_Module.v)]", 2); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v), DSS_Module_inst1 : DSS_Module (DDS_Module.v), ROM_0 : ROM_0 (ROM_0.xci)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v), DSS_Module_inst1 : DSS_Module (DDS_Module.v), ROM_0 : ROM_0 (ROM_0.xci)]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// O (cp):  Re-customize IP : addNotify
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35tftg256-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 851 MB. GUI used memory: 51 MB. Current time: 7/25/22, 1:04:21 PM CST
+// [Engine Memory]: 927 MB (+220323kb) [00:01:40]
+// r (cp): Re-customize IP: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1390 ms.
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v), DSS_Module_inst1 : DSS_Module (DDS_Module.v), ROM_0 : ROM_0 (ROM_0.xci)]", 3); // B (D, cp)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+dismissDialog("Re-customize IP"); // O (cp)
+selectButton("OptionPane.button", "OK"); // JButton (C, I)
+dismissDialog("Re-customize IP"); // r (cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DDS_Module_AD9767 (DDS_Module_AD9767.v), DSS_Module_inst1 : DSS_Module (DDS_Module.v), ROM_0 : ROM_0 (ROM_0.xci)]", 3); // B (D, cp)
+// A (cp): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // A (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "ROM"); // OverlayTextField (ay, cp)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aF, cp)
+selectTreeTableHeader(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4", 1); // O (Q, cp)
+// [GUI Memory]: 113 MB (+87kb) [00:02:09]
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 10, "Block Memory Generator", 0, true); // O (Q, cp) - Node
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 10); // O (Q, cp)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 10, "Block Memory Generator", 0, true, false, false, false, false, true); // O (Q, cp) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// r (cp): Customize IP: addNotify
+setText("Component Name", "ROM_1"); // z (U, r)
+selectComboBox("Interface Type (Interface_Type)", "Native", 0); // E (C, r)
+selectComboBox("Memory Type (Memory_Type)", "Single Port ROM", 3); // E (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // bg (C, r)
+setText("Defines the PortA Write Width(DINA)", "14"); // z (bh, r)
+// HMemoryUtils.trashcanNow. Engine heap size: 956 MB. GUI used memory: 111 MB. Current time: 7/25/22, 1:05:11 PM CST
+setText("Write Depth", "4096"); // z (bh, r)
+selectComboBox("Enable Port Type (Enable_A)", "Always Enabled", 0); // E (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // bg (C, r)
+// Elapsed time: 45 seconds
+selectCheckBox((HResource) null, "Load Init File", true); // g (o, r): TRUE
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_BROWSE, "Browse"); // a (C, r)
+selectComboBox(RDIResource.HJFileChooserRecentListPreview_RECENT_DIRECTORIES, "D:/Projects/FPGA/22_DDS_Module_AD9767", 12); // ak (ag, JDialog)
+setFileChooser("D:/Projects/FPGA/22_DDS_Module_AD9767/user/data/triangular_wave.coe");
+// WARNING: HEventQueue.dispatchEvent() is taking  3054 ms.
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // bg (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // bg (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // bg (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bg (C, r)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: CREATE_IP_CORE
+dismissDialog("Customize IP"); // r (cp)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ROM_1 
+// bx (cp):  Customize IP : addNotify
+// Tcl Message: set_property -dict [list CONFIG.Component_Name {ROM_1} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {14} CONFIG.Write_Depth_A {4096} CONFIG.Read_Width_A {14} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {14} CONFIG.Read_Width_B {14} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/Projects/FPGA/22_DDS_Module_AD9767/user/data/triangular_wave.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips ROM_1] 
+// Tcl Message: INFO: [IP_Flow 19-3484] Absolute path of file 'd:/Projects/FPGA/22_DDS_Module_AD9767/user/data/triangular_wave.coe' provided. It will be converted relative to IP Instance files '../../../../../../user/data/triangular_wave.coe' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_1/ROM_1.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_1'... 
+// aI (cp): Generate Output Products: addNotify
+dismissDialog("Customize IP"); // bx (cp)
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// bx (cp):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_1/ROM_1.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_1'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_1'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ROM_1'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_1'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all ROM_1] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_1/ROM_1.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_1/ROM_1.xci] 
+// TclEventType: RUN_ADD
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs -jobs 4 ROM_1_synth_1 
+// Tcl Message: [Mon Jul 25 13:06:38 2022] Launched ROM_1_synth_1... Run output will be captured here: d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.runs/ROM_1_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Elapsed time: 37 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton (C, I)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+unMinimizeFrame(RDIResource.RDIViews_PROPERTIES, "Properties"); // ax
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // ax
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 10, "Block Memory Generator", 0, true); // O (Q, cp) - Node
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 10, "Block Memory Generator", 0, true, false, false, false, false, true); // O (Q, cp) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// r (cp): Customize IP: addNotify
+setText("Component Name", "ROM_2"); // z (U, r)
+selectComboBox("Memory Type (Memory_Type)", "Single Port ROM", 3); // E (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // bg (C, r)
+setText("Defines the PortA Write Width(DINA)", "14"); // z (bh, r)
+setText("Write Depth", "4096"); // z (bh, r)
+selectComboBox("Enable Port Type (Enable_A)", "Always Enabled", 0); // E (C, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // bg (C, r)
+selectCheckBox((HResource) null, "Load Init File", true); // g (o, r): TRUE
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_BROWSE, "Browse"); // a (C, r)
+selectComboBox(RDIResource.HJFileChooserRecentListPreview_RECENT_DIRECTORIES, "D:/Projects/FPGA/22_DDS_Module_AD9767", 13); // ak (ag, JDialog)
+// TclEventType: RUN_FAILED
+setFileChooser("D:/Projects/FPGA/22_DDS_Module_AD9767/user/data/square_wave.coe");
+// WARNING: HEventQueue.dispatchEvent() is taking  2701 ms.
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: CREATE_IP_CORE
+dismissDialog("Customize IP"); // r (cp)
+// [Engine Memory]: 1,022 MB (+51509kb) [00:05:22]
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ROM_2 
+// bx (cp):  Customize IP : addNotify
+// Tcl Message: set_property -dict [list CONFIG.Component_Name {ROM_2} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {14} CONFIG.Write_Depth_A {4096} CONFIG.Read_Width_A {14} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {14} CONFIG.Read_Width_B {14} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/Projects/FPGA/22_DDS_Module_AD9767/user/data/square_wave.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips ROM_2] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,023 MB. GUI used memory: 68 MB. Current time: 7/25/22, 1:08:06 PM CST
+// Tcl Message: INFO: [IP_Flow 19-3484] Absolute path of file 'd:/Projects/FPGA/22_DDS_Module_AD9767/user/data/square_wave.coe' provided. It will be converted relative to IP Instance files '../../../../../../user/data/square_wave.coe' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_2/ROM_2.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ROM_2'... 
+// aI (cp): Generate Output Products: addNotify
+dismissDialog("Customize IP"); // bx (cp)
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// bx (cp):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_2/ROM_2.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM_2'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM_2'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ROM_2'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ROM_2'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all ROM_2] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_2/ROM_2.xci] -no_script -sync -force -quiet 
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.srcs/sources_1/ip/ROM_2/ROM_2.xci] 
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// [GUI Memory]: 126 MB (+7589kb) [00:05:36]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs -jobs 4 ROM_2_synth_1 
+// Tcl Message: [Mon Jul 25 13:08:19 2022] Launched ROM_2_synth_1... Run output will be captured here: d:/Projects/FPGA/22_DDS_Module_AD9767/prj/xilinx/template.runs/ROM_2_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Elapsed time: 32 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton (C, I)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+selectButton(PAResourceQtoS.RunGadget_SHOW_ERROR, "1 error"); // h (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+selectButton(PAResourceQtoS.RunGadget_SHOW_ERROR, "1 error"); // h (Q)
+// [GUI Memory]: 133 MB (+141kb) [00:06:35]
+// Elapsed time: 16 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cp)
+// bx (cp):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_OUT_OF_CONTEXT_Cancel Process", "Cancel Process"); // JButton (C, I)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run ROM_2_synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bx (cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "DDS_Module_AD9767.v", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+unMinimizeFrame(RDIResource.RDIViews_PROPERTIES, "Properties"); // ax
