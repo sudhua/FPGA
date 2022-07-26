@@ -8,6 +8,7 @@ module key_filter(
     input Reset_n;
     input key; 
     output reg key_flag;
+    //为了加快仿真时间，对消抖时间进行调整，调整为20us。
     parameter Timer0 = 1_000; //20us
     //边沿检测，上下两种写法是一样的效果。
     reg [1:0]r_key;

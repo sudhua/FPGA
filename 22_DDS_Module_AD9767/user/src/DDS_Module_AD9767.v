@@ -30,7 +30,6 @@ module DDS_Module_AD9767(
 	
 	reg [31:0]Fword1;
 	reg [11:0]Pword1;
-	//wire [13:0]Data1;
 	DSS_Module DSS_Module_inst1(
 		.Clk(Clk),
 		.Reset_n(Reset_n),
@@ -41,7 +40,6 @@ module DDS_Module_AD9767(
 	);
 	reg [31:0]Fword2;
 	reg [11:0]Pword2;
-	//reg [13:0]Data2;
 	DSS_Module DSS_Module_inst2(
 		.Clk(Clk),
 		.Reset_n(Reset_n),
@@ -50,6 +48,7 @@ module DDS_Module_AD9767(
 		.Pword(Pword2),
 		.Data(Data2)
 	);
+
 	wire [3:0]Key_flag;
     key_filter key_filter_inst1(
         .Clk(Clk),
@@ -86,7 +85,7 @@ module DDS_Module_AD9767(
 		count0 <= 0;
 	else if (!Key[0] && Key_flag[0])
 		count0 <= count0 + 1;
-	
+	//2**32超出了Fword1的范围，溢出，会导致结果错误，所以都计算出来了。
 	always@(posedge Clk)
 		case(count0)
 			0: Fword1 <= 8589;//100 * 2**32 / 50_000_000; //100hz
@@ -127,14 +126,14 @@ module DDS_Module_AD9767(
 	
 	always@(posedge Clk)
 		case(count2)
-			0: Fword2 <= 8589;//100 * 2**32 / 50_000_000; 
-			1: Fword2 <= 85899;//1_000 * 2**32 / 50_000_000; 
-			2: Fword2 <= 2_000 * 2**32 / 50_000_000; 
-			3: Fword2 <= 10_000 * 2**32 / 50_000_000; 
-			4: Fword2 <= 20_000 * 2**32 / 50_000_000; 
-			5: Fword2 <= 100_000 * 2**32 / 50_000_000; 
-			6: Fword2 <= 1_000_000 * 2**32 / 50_000_000; 
-			7: Fword2 <= 5_000_000 * 2**32 / 50_000_000; 
+			0: Fword2 <= 8589;//100 * 2**32 / 50_000_000; //100hz
+			1: Fword2 <= 85899;//1_000 * 2**32 / 50_000_000; //1Khz
+			2: Fword2 <= 171798;//2_000 * 2**32 / 50_000_000; //2Khz
+			3: Fword2 <= 858993;//10_000 * 2**32 / 50_000_000; //10Khz
+			4: Fword2 <= 1717987;//20_000 * 2**32 / 50_000_000; //20Khz
+			5: Fword2 <= 8589935;//100_000 * 2**32 / 50_000_000; //100Khz
+			6: Fword2 <= 85899346;//1_000_000 * 2**32 / 50_000_000; //1MKhz
+			7: Fword2 <= 429496730;//5_000_000 * 2**32 / 50_000_000; //5Mhz
 		endcase
 
 	reg [3:0]count3;

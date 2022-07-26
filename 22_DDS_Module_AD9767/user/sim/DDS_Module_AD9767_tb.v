@@ -60,36 +60,8 @@ module DDS_Module_AD9767_tb();
         #30_000;
         Key[2] = 1;
 
-        // //KEY_PRESS(key[0]);
-        // #20;
-        // KEY_PRESS(key[1]);
-        // #20;
         #2_000_000;
         $finish();
     end 
 
-
-    // task KEY_PRESS;
-    //     //output key;
-    //     reg [31:0]key_rand;
-    //     inout  key_press;
-    //     begin
-    //     key_press = 1;
-    //     #5_00;
-    //     repeat(5)begin
-    //         key_rand = {$random} % (Timer1 - 1);
-    //         #key_rand key_press =~key_press;
-    //     end
-    //     #5_00;
-    //     key_press = 0;
-    //     #40_000;
-    //     repeat(5)begin
-    //         key_rand = {$random} % (Timer1 - 1);
-    //         #key_rand key_press =~key_press;
-    //     end
-    //     #40_000;
-    //     key_press = 1;
-    //     #5_00;
-    //     end
-    // endtask
 endmodule
