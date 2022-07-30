@@ -42,26 +42,70 @@ module DDS_Module_AD9767_tb();
         #2000;
         Module_Sel1 = 1;
         Module_Sel2 = 2;
-        Key[0] = 1;
-        #5_000;
-        Key[0] = 0;
-        #30_000;
-        Key[0] = 1;
-        #200;
-        Key[1] = 1;
-        #5_000;
-        Key[1] = 0;
-        #30_000;
-        Key[1] = 1;
-        #20;
-        Key[2] = 1;
-        #5_000;
-        Key[2] = 0;
-        #30_000;
-        Key[2] = 1;
-
+        key1_press(4);
+        key2_press(5);
+        key3_press(6);
+        key4_press(7);
         #2_000_000;
         $finish();
     end 
+    task key1_press;
+        input [3:0] cnt;
+        begin
+            repeat(cnt)
+            begin
+                Key[0] = 1;
+                #5_000;
+                Key[0] = 0;
+                #30_000;
+                Key[0] = 1;
+                #10_000;
+            end
+        end
+    endtask
 
+    task key2_press;
+        input [3:0] cnt2;
+        begin
+            repeat(cnt2)
+            begin
+                Key[1] = 1;
+                #5_000;
+                Key[1] = 0;
+                #30_000;
+                Key[1] = 1;
+                #10_000;
+            end
+        end
+    endtask
+
+    task key3_press;
+        input [3:0] cnt3;
+        begin
+            repeat(cnt3)
+            begin
+                Key[2] = 1;
+                #5_000;
+                Key[2] = 0;
+                #30_000;
+                Key[2] = 1;
+                #10_000;
+            end
+        end
+    endtask
+
+    task key4_press;
+        input [3:0] cnt4;
+        begin
+            repeat(cnt4)
+            begin
+                Key[3] = 1;
+                #5_000;
+                Key[3] = 0;
+                #30_000;
+                Key[3] = 1;
+                #10_000;
+            end
+        end
+    endtask
 endmodule

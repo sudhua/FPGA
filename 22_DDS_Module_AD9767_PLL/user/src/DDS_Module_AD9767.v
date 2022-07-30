@@ -23,22 +23,23 @@ module DDS_Module_AD9767(
 	output  WRT1;
 	output  WRT2;
 
+	wire CLK_125M;
 	MMCM MMCM(
-		.clk_out1(clk_out1),    
-		.reset(reset), 
-		.locked(locked),       
-		.clk_in1(clk_in1)
+		.clk_out1(CLK_125M),    
+		.resetn(Reset_n), 
+		.locked(),       
+		.clk_in1(Clk)
 	);     
 	
-	assign CLK1 = Clk;
-	assign CLK2 = Clk;
-	assign WRT1 = Clk;
-	assign WRT2 = Clk;
+	assign CLK1 = CLK_125M;
+	assign CLK2 = CLK_125M;
+	assign WRT1 = CLK1;
+	assign WRT2 = CLK2;
 	
 	reg [31:0]Fword1;
 	reg [11:0]Pword1;
 	DSS_Module DSS_Module_inst1(
-		.Clk(Clk),
+		.Clk(CLK_125M),
 		.Reset_n(Reset_n),
 		.Module_Sel(Module_Sel1),
 		.Fword(Fword1),
@@ -48,7 +49,7 @@ module DDS_Module_AD9767(
 	reg [31:0]Fword2;
 	reg [11:0]Pword2;
 	DSS_Module DSS_Module_inst2(
-		.Clk(Clk),
+		.Clk(CLK_125M),
 		.Reset_n(Reset_n),
 		.Module_Sel(Module_Sel2),
 		.Fword(Fword2),
@@ -58,25 +59,25 @@ module DDS_Module_AD9767(
 
 	wire [3:0]Key_flag;
     key_filter key_filter_inst1(
-        .Clk(Clk),
+        .Clk(CLK_125M),
         .Reset_n(Reset_n),
         .key(Key[0]),
         .key_flag(Key_flag[0])
     );
     key_filter key_filter_inst2(
-        .Clk(Clk),
+        .Clk(CLK_125M),
         .Reset_n(Reset_n),
         .key(Key[1]),
         .key_flag(Key_flag[1])
     );
     key_filter key_filter_inst3(
-        .Clk(Clk),
+        .Clk(CLK_125M),
         .Reset_n(Reset_n),
         .key(Key[2]),
         .key_flag(Key_flag[2])
     );
     key_filter key_filter_inst4(
-        .Clk(Clk),
+        .Clk(CLK_125M),
         .Reset_n(Reset_n),
         .key(Key[3]),
         .key_flag(Key_flag[3])
@@ -87,13 +88,13 @@ module DDS_Module_AD9767(
 	// key[2] ---> Fword2
 	// key[3] ---> Pword2
 	reg [3:0]count0;
-	always@(posedge Clk or negedge Reset_n)
+	always@(posedge CLK_125M or negedge Reset_n)
 	if(!Reset_n)
 		count0 <= 0;
 	else if (!Key[0] && Key_flag[0])
 		count0 <= count0 + 1;
 	//2**32超出了Fword1的范围，溢出，会导致结果错误，所以都计算出来了。
-	always@(posedge Clk)
+	always@(posedge CLK_125M)
 		case(count0)
 			0: Fword1 <= 8589;//100 * 2**32 / 50_000_000; //100hz
 			1: Fword1 <= 85899;//1_000 * 2**32 / 50_000_000; //1Khz
@@ -106,13 +107,13 @@ module DDS_Module_AD9767(
 		endcase
 
 	reg [3:0]count1;
-	always@(posedge Clk or negedge Reset_n)
+	always@(posedge CLK_125M or negedge Reset_n)
 	if(!Reset_n)
 		count1 <= 0;
 	else if (!Key[1] && Key_flag[1])
 		count1 <= count1 + 1;
 	
-	always@(posedge Clk)
+	always@(posedge CLK_125M)
 		case(count1)
 			0: Pword1 <= 0;
 			1: Pword1 <= 512; 
@@ -125,13 +126,13 @@ module DDS_Module_AD9767(
 		endcase
 
 	reg [3:0]count2;
-	always@(posedge Clk or negedge Reset_n)
+	always@(posedge CLK_125M or negedge Reset_n)
 	if(!Reset_n)
 		count2 <= 0;
 	else if (!Key[2] && Key_flag[2])
 		count2 <= count2 + 1;
 	
-	always@(posedge Clk)
+	always@(posedge CLK_125M)
 		case(count2)
 			0: Fword2 <= 8589;//100 * 2**32 / 50_000_000; //100hz
 			1: Fword2 <= 85899;//1_000 * 2**32 / 50_000_000; //1Khz
@@ -144,13 +145,13 @@ module DDS_Module_AD9767(
 		endcase
 
 	reg [3:0]count3;
-	always@(posedge Clk or negedge Reset_n)
+	always@(posedge CLK_125M or negedge Reset_n)
 	if(!Reset_n)
 		count3 <= 0;
 	else if (!Key[3] && Key_flag[3])
 		count3 <= count3 + 1;
 	
-	always@(posedge Clk)
+	always@(posedge CLK_125M)
 		case(count3)
 			0: Pword2 <= 0;
 			1: Pword2 <= 512; 
