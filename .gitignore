@@ -1,3 +1,7 @@
 **/prj
 **/.vscode
+**/user/ip
 *.vcd
+*.str
+*.dmp
+*.log
