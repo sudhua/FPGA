@@ -5,11 +5,13 @@ module key_filter_tb();
         reg Reset_n;
         reg key;
         wire key_flag;
+        wire key_state;
     key_filter key_filter_inst0(
         Clk,
         Reset_n,
         key,
-        key_flag
+        key_flag,
+        key_state
     );
 
     initial begin

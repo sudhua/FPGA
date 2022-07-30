@@ -51,7 +51,7 @@ module VGA_CTRL(
     end
     else
         vcnt <= vcnt;
-
+    //以下两种写法实现的效果是一样的，第二种写法看起来更加的简洁。
     //行同步信号
     // always@(posedge Clk or negedge Reset_n)
     // if(!Reset_n)

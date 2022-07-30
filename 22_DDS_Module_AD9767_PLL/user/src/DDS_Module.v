@@ -29,12 +29,6 @@ module DSS_Module(
         Fword_ACC <= 0;
     else 
         Fword_ACC <= Fword_ACC + Fword_r;
-
-    always@(posedge Clk or negedge Reset_n)
-    if(!Reset_n)
-        Fword_ACC <= 0;
-    else 
-        Fword_ACC <= Fword_ACC + Fword_r;
     
     //相位控制字同步寄存器
     reg [11:0]Pword_r;
