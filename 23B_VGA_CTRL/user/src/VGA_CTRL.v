@@ -6,7 +6,9 @@ module VGA_CTRL(
     VGA_HS,
     VGA_VS,
     VGA_BLK,
-    VGA_RGB
+    VGA_RGB,
+    hcount,
+    vcount
 );
     input Clk;
     input Reset_n;
@@ -16,6 +18,8 @@ module VGA_CTRL(
     output reg VGA_VS;//场同步信号
     output reg VGA_BLK; //有效数据传送信号；BLK信号高电平时，为有效数据输出的时间段
     output reg [23:0]VGA_RGB; //输出数据信号
+    output reg [11:0]hcount; //行数据数据点位置
+    output reg [10:0]vcount; //列数据数据点位置
 
     `include "VGA_Resolution.v" //包含VGA_Resolution.v文件
     localparam Hsync_End = `H_Total_Time; //行同步总时间
@@ -62,7 +66,7 @@ module VGA_CTRL(
     //     VGA_HS <= 1;
     //行同步信号
     always@(posedge Clk)
-        VGA_HS <= (hcnt <= HS_End) ? 0 : 1;
+        VGA_HS <= (hcnt <= HS_End - 1'd1) ? 0 : 1;
 
     //场同步信号
     always@(posedge Clk)
@@ -70,7 +74,7 @@ module VGA_CTRL(
 
     //BLK信号
     always@(posedge Clk)
-        Data_Req <= ((hcnt >=  Hdat_Begin ) && (hcnt <=  Hdat_End - 1'd1) && (vcnt >= Vdat_Begin - 1) && (vcnt <= Vdat_End - 1))? 1 : 0;
+        Data_Req <= ((hcnt >=  Hdat_Begin -1'd1) && (hcnt <=  Hdat_End - 2'd2) && (vcnt >= Vdat_Begin ) && (vcnt <= Vdat_End - 1'd1))? 1 : 0;
 
     always@(posedge Clk)
         VGA_BLK <= Data_Req;
@@ -80,6 +84,12 @@ module VGA_CTRL(
     //信号传输
     always@(posedge Clk)
         VGA_RGB <= Data_Req ? DATA : 0;
+
+    always@(posedge Clk)
+        hcount <= Data_Req ? (hcnt - Hdat_Begin) : hcount;
+
+    always@(posedge Clk)
+        vcount <=  Data_Req ? (vcnt - Vdat_Begin + 2'd2) : vcount;
 
 
 

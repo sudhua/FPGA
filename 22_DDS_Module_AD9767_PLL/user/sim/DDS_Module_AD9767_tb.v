@@ -40,15 +40,17 @@ module DDS_Module_AD9767_tb();
         #201;
         Reset_n = 1;
         #2000;
-        Module_Sel1 = 1;
-        Module_Sel2 = 2;
+        Module_Sel1 = 0;
+        Module_Sel2 = 0;
         key1_press(4);
         key2_press(5);
-        key3_press(6);
+        key3_press(4);
         key4_press(7);
         #2_000_000;
         $finish();
     end 
+    
+    //按键按下任务
     task key1_press;
         input [3:0] cnt;
         begin
