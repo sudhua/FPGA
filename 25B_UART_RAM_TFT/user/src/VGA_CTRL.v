@@ -14,9 +14,9 @@ module VGA_CTRL(
     input Reset_n;
     input [23:0]DATA; //输入数据信号
     output reg Data_Req; //信号输入请求信号，目的是提前VGA_BLK一拍
-    output reg VGA_HS;//行同步信号
-    output reg VGA_VS;//场同步信号
-    output reg VGA_BLK; //有效数据传送信号；BLK信号高电平时，为有效数据输出的时间段
+    output VGA_HS;//行同步信号
+    output VGA_VS;//场同步信号
+    output VGA_BLK; //有效数据传送信号；BLK信号高电平时，为有效数据输出的时间段
     output reg [23:0]VGA_RGB; //输出数据信号
     output reg [10:0]hcount; //行数据数据点位置
     output reg [10:0]vcount; //列数据数据点位置
@@ -65,19 +65,41 @@ module VGA_CTRL(
     // else
     //     VGA_HS <= 1;
     //行同步信号
-    always@(posedge Clk)
-        VGA_HS <= (hcnt <= HS_End - 1'd1) ? 0 : 1;
+    // always@(posedge Clk)
+    //     VGA_HS <= (hcnt <= HS_End - 1'd1) ? 0 : 1;
 
-    //场同步信号
-    always@(posedge Clk)
-        VGA_VS <= (vcnt <= VS_End - 1) ? 0 : 1;
+    // //场同步信号
+    // always@(posedge Clk)
+    //     VGA_VS <= (vcnt <= VS_End - 1) ? 0 : 1;
 
+    //行同步信号打拍
+    reg [3:0]VGA_HS_r;
+    always@(posedge Clk)begin
+        VGA_HS_r[0] <= (hcnt <= HS_End - 1'd1) ? 0 : 1;
+        VGA_HS_r[3:1] <= VGA_HS_r[2:0];
+    end
+    assign VGA_HS = VGA_HS_r[2];
+
+    //场同步信号打拍
+    reg [3:0]VGA_VS_r;
+    always@(posedge Clk)begin
+        VGA_VS_r[0] <= (vcnt <= VS_End - 1) ? 0 : 1;
+        VGA_VS_r[3:1] <= VGA_VS_r[2:0];
+    end
+    assign VGA_VS = VGA_VS_r[2];
     //BLK信号
     always@(posedge Clk)
         Data_Req <= ((hcnt >=  Hdat_Begin -1'd1) && (hcnt <=  Hdat_End - 2'd2) && (vcnt >= Vdat_Begin ) && (vcnt <= Vdat_End - 1'd1))? 1 : 0;
 
-    always@(posedge Clk)
-        VGA_BLK <= Data_Req;
+    // always@(posedge Clk)
+    //     VGA_BLK <= Data_Req;
+
+    reg [3:0]VGA_BLK_r;
+    always@(posedge Clk)begin
+        VGA_BLK_r[0] <= Data_Req;
+        VGA_BLK_r[3:1] <= VGA_BLK_r[2:0];
+    end
+    assign VGA_BLK = VGA_BLK_r[2];
     //always@(posedge Clk)
     //    VGA_BLK <= ((hcnt >=  Hdat_Begin + 1'd1) && (hcnt <=  Hdat_End) && (vcnt >= Vdat_Begin - 1) && (vcnt <= Vdat_End - 1))? 1 : 0;
 
@@ -85,10 +107,16 @@ module VGA_CTRL(
     always@(posedge Clk)
         VGA_RGB <= Data_Req ? DATA : 0;
 
-    always@(posedge Clk)
+    always@(posedge Clk or negedge Reset_n)
+    if(!Reset_n)
+        hcount <= 0;
+    else
         hcount <= Data_Req ? (hcnt - Hdat_Begin + 1'd1) : hcount;
 
-    always@(posedge Clk)
+    always@(posedge Clk or negedge Reset_n)
+    if(!Reset_n)
+        vcount <= 0;
+    else
         vcount <=  Data_Req ? (vcnt - Vdat_Begin + 1'd1) : vcount;
 
 

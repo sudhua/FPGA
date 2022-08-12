@@ -19,7 +19,8 @@ module VGA_TFT(
     output  VGA_HS;//行同步信号
     output  VGA_VS;//场同步信号
     output  VGA_BLK; //有效数据传送信号；BLK信号高电平时，为有效数据输出的时间段
-    output  [15:0]VGA_RGB; //输出数据信号
+    output  [23:0]VGA_RGB; //输出数据信号 虽然使用RGB565 但是数据位数在兼容性上依然可以以RGB88配置，
+                           //硬件设置端口时，多余的信号线不接就可以！
     output TFT_BL;
 
     wire Data_Req; //信号输入请求信号，目的是提前VGA_BLK一拍
@@ -43,11 +44,11 @@ module VGA_TFT(
 localparam 
     BLACK       = 24'h000000, //黑色
     BLUE        = 24'h0000FF, //蓝色
-    RED     = 24'hFF0000, //红色
-    PURPPLE = 24'hFF00FF, //紫色
+    RED         = 24'hFF0000, //红色
+    PURPPLE     = 24'hFF00FF, //紫色
     GREEN       = 24'h00FF00, //绿色
     CYAN        = 24'h00FFFF, //青色
-    YELLOW  = 24'hFFFF00, //黄色
+    YELLOW      = 24'hFFFF00, //黄色
     WHITE       = 24'hFFFFFF; //白色
     
 //定义每个像素块的默认显示颜色值

@@ -86,10 +86,10 @@ module VGA_CTRL(
         VGA_RGB <= Data_Req ? DATA : 0;
 
     always@(posedge Clk)
-        hcount <= Data_Req ? (hcnt - Hdat_Begin) : hcount;
+        hcount <= Data_Req ? (hcnt - Hdat_Begin + 1'd1) : hcount;
 
     always@(posedge Clk)
-        vcount <=  Data_Req ? (vcnt - Vdat_Begin + 2'd2) : vcount;
+        vcount <=  Data_Req ? (vcnt - Vdat_Begin + 1'd1) : vcount;
 
 
 

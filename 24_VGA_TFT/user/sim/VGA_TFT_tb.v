@@ -5,7 +5,7 @@ module VGA_TFT_tb;
     wire VGA_HS;
     wire VGA_VS;
     wire VGA_BLK;
-    wire [15:0]VGA_RGB;
+    wire [23:0]VGA_RGB;
     wire TFT_BL;//背光控制信号
 
     VGA_TFT VGA_TFT_inst0(
