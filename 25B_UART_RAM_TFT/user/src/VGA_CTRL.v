@@ -64,7 +64,7 @@ module VGA_CTRL(
     //     VGA_HS <= 0;
     // else
     //     VGA_HS <= 1;
-    //行同步信号
+    // //行同步信号
     // always@(posedge Clk)
     //     VGA_HS <= (hcnt <= HS_End - 1'd1) ? 0 : 1;
 

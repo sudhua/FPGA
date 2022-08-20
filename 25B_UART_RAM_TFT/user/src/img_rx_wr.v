@@ -41,8 +41,7 @@ module img_rx_wr(
     always@(posedge Clk or negedge Reset_n)
     if(!Reset_n)
         ram_wr_en <= 0;
-    //else if((!(data_cnt / 2))&&(Rx_Done))
-    else if((data_cnt[0])&&(Rx_Done))
+    else if(data_cnt[0] && Rx_Done)
         ram_wr_en <= 1;
     else
         ram_wr_en <= 0;
@@ -51,22 +50,11 @@ module img_rx_wr(
     always@(posedge Clk or negedge Reset_n)
     if(!Reset_n)
         ram_wr_addr <= 0;
-    else if((data_cnt[0])&&(Rx_Done))
-        //ram_wr_addr <= ram_wr_addr + 1'd1;
+    else if(data_cnt[0] && Rx_Done)
         ram_wr_addr <= data_cnt[15:1];
     else
         ram_wr_addr <= ram_wr_addr;
 
     assign ram_wr_data = rx_data_tmp;
-    // always@(posedge Clk or negedge Reset_n)
-    // if(!Reset_n)
-    //     ram_wr_data <= 0;
-    // else if(ram_wr_en)
-    //     ram_wr_data <= rx_data_tmp;
-    // else
-    //     ram_wr_data <= ram_wr_data;
-
-
-
 
 endmodule

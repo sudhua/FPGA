@@ -54,7 +54,7 @@ module fifo_tb;
         #2000;
         wr_en = 1;
         #2;
-        repeat(250)begin
+        repeat(300)begin
             din = din + 1'd1;
             #20;
         end
@@ -62,9 +62,9 @@ module fifo_tb;
         wr_en = 0;
         #2000;
         rd_en = 1;
-        #200000;
-        rd_en = 0;
-        #2000;
+        //#200000;
+        //rd_en = 0;
+        #20000;
         $finish();
     end
 

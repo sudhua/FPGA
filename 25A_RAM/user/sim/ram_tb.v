@@ -38,7 +38,7 @@ module ram_tb;
         dina = 0;
         enb = 0;
         addrb = 0;
-        #201;
+        #215;
         repeat(65536) begin
             ena = 1;
             wea = 1;
