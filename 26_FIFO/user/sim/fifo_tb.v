@@ -41,9 +41,7 @@ module fifo_tb;
     );
     initial Clk = 1;
     always #10 Clk = ~Clk;
-    // always@(posedge Clk or negedge Reset_n)
-    // if(!Reset_n)
-        
+
     initial begin
         Reset_n = 1;
         din = 0;
@@ -62,8 +60,6 @@ module fifo_tb;
         wr_en = 0;
         #2000;
         rd_en = 1;
-        //#200000;
-        //rd_en = 0;
         #20000;
         $finish();
     end
