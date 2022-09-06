@@ -5,7 +5,7 @@
 - **din** 写入数据输入端口。
 - **wr_data_count** 写入数据个数计数器：在FIFO每写入一个数据时就加一。当数据每读出一个时，计数器的值就减一。
 - **full** FIFO装满标志位：当FIFO写满时（写入最后一个数据时），此信号拉高；FIFO没有装满时，拉低。
-- - **almost_full** FIFO几乎装满标志位：比full信号提前一拍。
+- **almost_full** FIFO几乎装满标志位：比full信号提前一拍。
 - **prog_full** 可编程的FIFO装满标志位。
 - **overflow** 写入溢出标志位：FIFO写满后的下一个时钟上升沿被拉高。
 ## 1.2 读出数据

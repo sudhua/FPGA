@@ -8,7 +8,7 @@ module fifo_tb;
     wire [7:0]dout;
     wire full;
     wire almost_full;
-    wire wr_ack;
+    wire wr_ack; 
     wire overflow;
     wire empty;
     wire almost_empty;
